@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
+import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../../globals/globalVariables";
 
-function NowPlayingList() {
+function PopularList() {
 
     const [movies, setMovies] = useState([]);
         const [loading, setLoading] = useState(true);
@@ -10,7 +10,7 @@ function NowPlayingList() {
         useEffect(() => {
           const fetchMovies = async () => {
             try {
-              const response = await fetch(`${BASE_URL}/movie/now_playing?api_key=${apiKey}`);
+              const response = await fetch(`${BASE_URL}/movie/popular?api_key=${apiKey}`);
               if (!response.ok) {
                 throw new Error('Network response was not ok');
               }
@@ -34,11 +34,12 @@ function NowPlayingList() {
     return (
         <>
         <section>
-            <h2>Now Playing</h2>
+            <h2>Popular</h2>
+
             {movies.length > 0 && (
               <div>
                 {movies.map(movie => (
-                  <div key={movie.id} className="now-playing-slider movie-slider">
+                  <div key={movie.id} className="popular-slider movie-slider">
                     <img
                       src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                       alt={movie.title}
@@ -57,4 +58,4 @@ function NowPlayingList() {
     )
 }
 
-export default NowPlayingList;
+export default PopularList;
