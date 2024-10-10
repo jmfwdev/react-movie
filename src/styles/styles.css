@@ -3,4 +3,9 @@
   width: 100vw;
 }
 
+.movie-slider img {
+  width: 300px;
+  height: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

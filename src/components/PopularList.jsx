@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
 
-function MovieList() {
+function PopularList() {
 
     const [movies, setMovies] = useState([]);
         const [loading, setLoading] = useState(true);
@@ -48,7 +48,7 @@ function MovieList() {
                       className="movie-poster"
                     />
                     <div className="caption">
-                      <h2>{movie.title}</h2>
+                      <h3>{movie.title}</h3>
                       <p>{movie.overview}</p>
                     </div>
                   </div>
@@ -61,4 +61,4 @@ function MovieList() {
     )
 }
 
-export default MovieList;
+export default PopularList;

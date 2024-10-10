@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Nav from '../components/Nav';
 import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
-import MovieList from '../components/MovieList';
+import PopularList from '../components/PopularList';
 
 function PageHome() {
     return (
@@ -10,7 +10,7 @@ function PageHome() {
         
         < Nav />
         < Frontpage />
-        < MovieList />
+        < PopularList />
         < Footer />
 
         </>
