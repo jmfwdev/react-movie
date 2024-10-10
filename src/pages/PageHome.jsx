@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
 import PopularList from '../components/PopularList';
-import TopRatedList from '../components/TopRated';
+import TopRatedList from '../components/TopRatedList';
 
 function PageHome() {
     return (
