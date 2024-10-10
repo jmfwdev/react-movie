@@ -1,0 +1,18 @@
+:root {
+}
+
+img {
+    width: 100vw;
+    height: auto;
+}
+
+.slide {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    bottom: 1rem;
+    z-index: 1;
+    color: #fff;
+}
