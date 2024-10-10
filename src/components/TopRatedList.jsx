@@ -37,11 +37,10 @@ function TopRatedList() {
         <section>
             <h2>Top Rated</h2>
 
-            <div className='top-rated movie-slider'>
             {movies.length > 0 && (
               <div>
                 {movies.map(movie => (
-                  <div key={movie.id} className="top-rated-slider">
+                  <div key={movie.id} className="top-rated-slider movie-slider">
                     <img
                       src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                       alt={movie.title}
@@ -55,7 +54,6 @@ function TopRatedList() {
                 ))}
               </div>
             )}
-            </div>
         </section>
         </>
     )

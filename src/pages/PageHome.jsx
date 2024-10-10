@@ -4,6 +4,8 @@ import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
 import PopularList from '../components/PopularList';
 import TopRatedList from '../components/TopRatedList';
+import NowPlayingList from '../components/NowPlayingList';
+import UpcomingList from '../components/UpcomingList';
 
 function PageHome() {
     return (
@@ -13,6 +15,8 @@ function PageHome() {
         < Frontpage />
         < PopularList />
         < TopRatedList />
+        < NowPlayingList />
+        < UpcomingList />
         < Footer />
 
         </>
