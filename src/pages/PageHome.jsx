@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Nav from '../components/Nav';
+import Header from '../components/Header';
 import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
 import PopularList from '../components/movielist/PopularList';
@@ -11,7 +11,7 @@ function PageHome() {
     return (
         <>
         
-        < Nav />
+        < Header />
         < Frontpage />
         < PopularList />
         < TopRatedList />

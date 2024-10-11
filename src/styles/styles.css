@@ -307,6 +307,17 @@ template {
   display: none;
 }
 
+header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
 .hero-slider {
   display: flex;
   overflow: scroll;
