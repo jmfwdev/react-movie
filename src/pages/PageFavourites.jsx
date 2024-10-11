@@ -10,12 +10,6 @@ function PageFavourites() {
 
         <main>
 
-        <h1>Favourites</h1>
-
-        <div className='favourites-container'>
-
-        </div>
-        
         </main>
 
         < Footer />
