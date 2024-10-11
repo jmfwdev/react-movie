@@ -30,7 +30,7 @@ function PageAbout() {
         <h2>Enjoy your movie journey with SPADE!</h2>
       </div>
 
-      <section class="authors">
+      <section className="authors">
         <p>Site made for educational purposes only.</p>
         <p>
           This product uses the TMDB API but is not endorsed or certified by

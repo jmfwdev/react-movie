@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
+import { Link } from 'react-router-dom';
 
 function List (props) {
     const categories = [
@@ -47,7 +48,13 @@ function List (props) {
                         {categoryMovies.movies.map(movie => (
                             <div key={movie.id}>
                                 <h3 key={movie.id} >{movie.title}</h3>
-                                <img style={{width: '300px'}}src={`${IMAGE_BASE_URL}${movie.poster_path}`} alt="movie" />
+                                <Link to={`/detail/${movie.id}`}>
+                                    <img    
+                                            style={{width: '300px'}} 
+                                            src={`${IMAGE_BASE_URL}${movie.poster_path}`} 
+                                            alt="movie" 
+                                    />
+                                </Link>
                                 <div onClick={() => props.handleFavouritesClick(movie)}>
                                     < FavouriteComponent />
                                 </div>
