@@ -1,0 +1,12 @@
+.search-movie-container {
+    width: 100vw;
+    height: 100vh;
+
+    margin-top: 5rem;
+
+    .movie-list-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}

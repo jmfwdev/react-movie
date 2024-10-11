@@ -376,4 +376,14 @@ header a {
   margin: 10px;
 }
 
+.search-movie-container {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5rem;
+}
+.search-movie-container .movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*# sourceMappingURL=styles.css.map */

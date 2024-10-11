@@ -1,14 +1,12 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
 
-
-
-function MovieList (props) {
+function FavouriteList (props) {
 
     const FavouriteComponent = props.favouriteComponent;
 
     return (
-        <div className='movie-list-container'>
+        <>
         {props.movies.map((movie, index) => (
             <div key={movie.id}>
                 <img    src={`${IMAGE_BASE_URL}${movie.poster_path}`} 
@@ -20,8 +18,8 @@ function MovieList (props) {
                 </div>
             </div>
             ))}
-        </div>
+        </>
     )
 }
 
-export default MovieList;
+export default FavouriteList;

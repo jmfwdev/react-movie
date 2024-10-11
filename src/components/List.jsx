@@ -29,7 +29,11 @@ function List (props) {
         };
 
         getMovies();
-    }, [apiKey]); // Add dependencies if needed
+    }, []);
+
+      function excerpt (text, maxLength) {
+        return text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
+      };
 
     return (
         <>
@@ -47,6 +51,7 @@ function List (props) {
                                 <div onClick={() => props.handleFavouritesClick(movie)}>
                                     < FavouriteComponent />
                                 </div>
+                                <p>{excerpt(movie.overview, 100)}{" "}</p>
                             </div>
                         ))}
                     </div>

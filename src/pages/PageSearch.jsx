@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
-import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
+import { apiKey, BASE_URL} from "../globals/globalVariables";
 import Header from '../components/Header';
-import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
 import MovieList from '../components/MovieList';
-import MovieListHeading from '../components/MovieListHeading';
 import SearchBox from '../components/SearchBox';
 import AddFavourites from '../components/AddFavourites';
-import RemoveFavourites from '../components/RemoveFavourites';
 
 
 function PageSearch () {
@@ -32,11 +29,6 @@ function PageSearch () {
         getMovieRequest();
     }, [searchValue]);
 
-    useEffect(() => {
-        const movieFavourites = JSON.parse(localStorage.getItem('react-movie-app-favourites'));
-
-        setFavourites(movieFavourites);
-    }, []);
 
     function saveToLocalStorage (items) {
         localStorage.setItem('react-movie-app-favourites', JSON.stringify(items))
@@ -65,19 +57,21 @@ function PageSearch () {
         <>
         
         < Header />
-        < Frontpage />
-        
+        <div className='search-movie-container'>
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-        < MovieListHeading heading='Movies' />
-        < MovieList movies={movies} 
-                    favouriteComponent={AddFavourites} 
-                    handleFavouritesClick = {addFavouriteMovie}
-        />
-        < MovieListHeading heading='Favourites' />
-        < MovieList movies={favourites} 
-                    favouriteComponent={RemoveFavourites} 
-                    handleFavouritesClick = {removeFavouriteMovie}
-        />
+
+        {movies.length > 0 ? (
+            <MovieList
+            movies={movies}
+            favouriteComponent={AddFavourites}
+            handleFavouritesClick={addFavouriteMovie}
+            />
+        ) : (
+            <h1>Input any name, actor, etc. on the search bar.</h1>
+        )
+    }
+        </div>
+
 
         < Footer />
 
