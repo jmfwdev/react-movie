@@ -29,9 +29,9 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
         if (error) return <div>Error: {error}</div>;
       
         return (
-          <div className="hero-slider">
+          <div>
             {movies.length > 0 && (
-              <div>
+              <div className="hero-slider">
                 {movies.map(movie => (
                   <div key={movie.id} className="slide">
                     <img

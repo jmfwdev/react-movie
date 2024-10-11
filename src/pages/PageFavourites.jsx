@@ -5,12 +5,15 @@ function PageFavourites() {
 
     return (
         
-        <>
+        <main>
         
         < Nav />
+
+        <h1>Favourites</h1>
+        
         < Footer />
 
-        </>
+        </main>
         
     )
 }

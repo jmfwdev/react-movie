@@ -5,7 +5,7 @@ function PageAbout() {
     
     return (
         
-        <>
+        <main>
         
         < Nav />
 
@@ -42,9 +42,10 @@ function PageAbout() {
           />
         </p>
       </section>
+
         < Footer />
 
-        </>
+        </main>
         
     )
 }

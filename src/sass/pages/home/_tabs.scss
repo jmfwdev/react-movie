@@ -1,6 +1,14 @@
 .movie-slider {
+
+    display: flex;
+    overflow: scroll;
+
     img {
         width: 300px;
         height: auto;
+    }
+
+    .movie {
+        margin: 10px;
     }
 }

@@ -36,9 +36,9 @@ function NowPlayingList() {
         <section>
             <h2>Now Playing</h2>
             {movies.length > 0 && (
-              <div>
+              <div className='movie-slider'>
                 {movies.map(movie => (
-                  <div key={movie.id} className="now-playing-slider movie-slider">
+                  <div key={movie.id} className="movie">
                     <img
                       src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                       alt={movie.title}

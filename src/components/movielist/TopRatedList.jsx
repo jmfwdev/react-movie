@@ -15,7 +15,6 @@ function TopRatedList() {
                 throw new Error('Network response was not ok');
               }
               const data = await response.json();
-              console.log(data);
               setMovies(data.results.slice(0, 16));
             } catch (error) {
               setError(error.message);
@@ -38,9 +37,9 @@ function TopRatedList() {
             <h2>Top Rated</h2>
 
             {movies.length > 0 && (
-              <div>
+              <div className='movie-slider'>
                 {movies.map(movie => (
-                  <div key={movie.id} className="top-rated-slider movie-slider">
+                  <div key={movie.id} className="movie">
                     <img
                       src={`${IMAGE_BASE_URL}${movie.poster_path}`}
                       alt={movie.title}

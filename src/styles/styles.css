@@ -307,14 +307,25 @@ template {
   display: none;
 }
 
+.hero-slider {
+  display: flex;
+  overflow: scroll;
+}
 .hero-slider img {
   height: auto;
   width: 100vw;
 }
 
+.movie-slider {
+  display: flex;
+  overflow: scroll;
+}
 .movie-slider img {
   width: 300px;
   height: auto;
+}
+.movie-slider .movie {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
