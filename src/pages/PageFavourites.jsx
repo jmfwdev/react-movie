@@ -4,17 +4,23 @@ import Header from '../components/Header';
 function PageFavourites() {
 
     return (
-        
-        <main>
+        <>
         
         < Header />
 
+        <main>
+
         <h1>Favourites</h1>
+
+        <div className='favourites-container'>
+
+        </div>
         
+        </main>
+
         < Footer />
 
-        </main>
-        
+        </>
     )
 }
 

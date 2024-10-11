@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../../globals/globalVariables";
 
-function PopularList() {
+function PopularList(props) {
+
+    const FavouriteComponent = props.FavouriteComponent;
 
     const [movies, setMovies] = useState([]);
         const [loading, setLoading] = useState(true);
@@ -28,8 +30,6 @@ function PopularList() {
       
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error: {error}</div>;
-
-
 
     return (
         <>

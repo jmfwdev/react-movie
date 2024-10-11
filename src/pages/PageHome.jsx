@@ -8,12 +8,13 @@ import NowPlayingList from '../components/movielist/NowPlayingList';
 import UpcomingList from '../components/movielist/UpcomingList';
 
 function PageHome() {
+
     return (
         <>
         
         < Header />
         < Frontpage />
-        < PopularList />
+        < PopularList  />
         < TopRatedList />
         < NowPlayingList />
         < UpcomingList />
