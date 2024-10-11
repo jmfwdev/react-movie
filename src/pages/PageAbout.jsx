@@ -1,5 +1,5 @@
 import Footer from '../components/Footer';
-import Nav from '../components/Nav';
+import Header from '../components/Header';
 
 function PageAbout() {
     
@@ -7,7 +7,7 @@ function PageAbout() {
         
         <main>
         
-        < Nav />
+        < Header />
 
       <div className="container-about">
         <h1 className="about-title">Welcome to BLANK</h1>

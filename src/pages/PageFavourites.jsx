@@ -1,5 +1,5 @@
 import Footer from '../components/Footer';
-import Nav from '../components/Nav';
+import Header from '../components/Header';
 
 function PageFavourites() {
 
@@ -7,7 +7,7 @@ function PageFavourites() {
         
         <main>
         
-        < Nav />
+        < Header />
 
         <h1>Favourites</h1>
         

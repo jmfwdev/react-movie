@@ -34,16 +34,19 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
               <div className="hero-slider">
                 {movies.map(movie => (
                   <div key={movie.id} className="slide">
-                    <img
-                      src={`${IMAGE_BASE_URL}${movie.backdrop_path}`}
-                      alt={movie.title}
-                      className="hero-image"
-                    />
-                    <div className="caption">
-                      <h2>{movie.title}</h2>
-                      <p>{movie.overview}</p>
-                      <p>{movie.release_date}</p>
+                    <div className='image-container'>
+                      <div className='overlay'></div>
+                      <img
+                        src={`${IMAGE_BASE_URL}${movie.backdrop_path}`}
+                        alt={movie.title}
+                        className="hero-image"
+                      />
                     </div>
+                      <div className="caption">
+                        <h2>{movie.title}</h2>
+                        <p>{movie.overview}</p>
+                        <p>{movie.release_date}</p>
+                      </div>
                   </div>
                 ))}
               </div>
