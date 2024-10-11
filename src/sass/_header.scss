@@ -11,4 +11,19 @@ header {
         text-decoration: none;
         padding: 1rem;
     }
+
+    span {
+        color: white;
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        width: 35px;
+        height: auto;
+        transform: rotate(90deg);
+    }
+
+    .main-logo {
+        display: flex;
+    }
 }

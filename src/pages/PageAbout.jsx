@@ -10,9 +10,9 @@ function PageAbout() {
         < Header />
 
       <div className="container-about">
-        <h1 className="about-title">Welcome to BLANK</h1>
+        <h1 className="about-title">Welcome to SPADE</h1>
         <p>
-          Hey there, welcome to BLANK! We're excited to help you discover
+          Hey there, welcome to SPADE! We're excited to help you discover
           movies that match your unique tastes.
         </p>
 
@@ -24,10 +24,10 @@ function PageAbout() {
         </p>
 
         <p>
-          With BLANK, sharing your favourite movie lists with friends and
+          With SPADE, sharing your favourite movie lists with friends and
           family is a breeze, making movie nights even more enjoyable.
         </p>
-        <h2>Enjoy your movie journey with BLANK!</h2>
+        <h2>Enjoy your movie journey with SPADE!</h2>
       </div>
 
       <section class="authors">
