@@ -5,6 +5,7 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
         const [movies, setMovies] = useState([]);
         const [loading, setLoading] = useState(true);
         const [error, setError] = useState(null);
+        const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
       
         useEffect(() => {
           const fetchMovies = async () => {
@@ -15,6 +16,7 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
               }
               const data = await response.json();
               setMovies(data.results.slice(0, 5));
+              console.log(data);
             } catch (error) {
               setError(error.message);
             } finally {
@@ -23,6 +25,13 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
           };
       
           fetchMovies();
+          
+          function handleResize () {
+            setIsMobile(window.innerWidth < 700);
+          };
+          
+          window.addEventListener('resize', handleResize);
+          return () => window.removeEventListener('resize', handleResize);
         }, []);
       
         if (loading) return <div>Loading...</div>;
@@ -37,15 +46,15 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
                     <div className='image-container'>
                       <div className='overlay'></div>
                       <img
-                        src={`${IMAGE_BASE_URL}${movie.backdrop_path}`}
+                        src={`${IMAGE_BASE_URL}${isMobile ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.title}
                         className="hero-image"
                       />
                     </div>
                       <div className="caption">
                         <h2>{movie.title}</h2>
-                        <p>{movie.overview}</p>
                         <p>{movie.release_date}</p>
+                        <p>{Math.round(movie.vote_average * 10)}%</p>
                       </div>
                   </div>
                 ))}
