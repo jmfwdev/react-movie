@@ -1,0 +1,53 @@
+.movie-detail-container {
+    margin-top: 4rem;
+    display: flex;
+
+    .movie-img-container {
+        height: auto;
+        width: 40%;
+        margin: 1rem;
+        position: relative;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 15px #000;
+    }
+
+    .movie-average {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+
+
+    .movie-details {
+        width: 60%;
+        margin: 1rem;
+
+        .trailer {
+            margin: 0 auto;
+        }
+
+        .genres {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+    }
+
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(.2rem) brightness(0.3);
+}
