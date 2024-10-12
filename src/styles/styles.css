@@ -629,7 +629,7 @@ footer {
     border-radius: 0 0 1rem 1rem;
   }
   .movie-slider-container .movie:hover .favourite-button {
-    display: block;
+    display: flex;
   }
   .movie-slider-container .movie:hover .movie-poster {
     transform: translateY(-20px);
