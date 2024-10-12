@@ -553,6 +553,15 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.hero-slider .trending-title {
+  position: absolute;
+  right: 1rem;
+  top: 10rem;
+  z-index: 10;
+  background-color: red;
+  padding: 1rem;
+  box-shadow: 5px 5px 15px black;
+}
 .hero-slider .slides {
   position: relative;
   overflow: hidden;

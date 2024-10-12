@@ -65,6 +65,7 @@ const Frontpage = () => {
                                 className={`slide ${index === currentMovieSlide ? 'active' : ''}`}
                                 style={{ display: index === currentMovieSlide ? 'block' : 'none' }}
                             >
+                                <h2 className='trending-title'>Trending</h2>
                                 <div className='image-container'>
                                     <div className='overlay'></div>
                                     <img
