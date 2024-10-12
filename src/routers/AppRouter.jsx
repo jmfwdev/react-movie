@@ -9,7 +9,7 @@ import PageMovieDetail from '../pages/PageMovieDetail';
 
 function AppRouter() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename='/spade/'>
         <div>
           <Routes>
             <Route path="/" exact element={<PageHome />} />
