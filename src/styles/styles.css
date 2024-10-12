@@ -438,6 +438,21 @@ header ul {
   margin: 1rem;
   position: relative;
 }
+.movie-detail-container .movie-img-container .favourite-button {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.movie-detail-container .movie-img-container .favourite-button img {
+  border-radius: 0;
+  box-shadow: unset;
+}
 .movie-detail-container img {
   height: auto;
   width: 100%;

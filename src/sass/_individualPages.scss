@@ -7,6 +7,22 @@
         width: 40%;
         margin: 1rem;
         position: relative;
+
+        .favourite-button {
+            width: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            border-radius: 50%;
+            cursor: pointer;
+            img {
+                border-radius: 0;
+                box-shadow: unset;
+            }
+        }
     }
 
     img {
