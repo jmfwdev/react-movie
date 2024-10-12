@@ -36,7 +36,7 @@ function PageMovieDetail() {
     useEffect(() => {
         const movieFavourites = JSON.parse(localStorage.getItem('react-movie-app-favourites'));
 
-        setFavourites(movieFavourites);
+        setFavourites(Array.isArray(movieFavourites) ? movieFavourites : []);
     }, []);
 
     function saveToLocalStorage (items) {
@@ -68,55 +68,59 @@ function PageMovieDetail() {
         <>
             <Header />
             <Logo />
-            <img
-                className='backdrop'    
-                src={`${IMAGE_BASE_URL}${movie?.backdrop_path}`}
-                alt="backdrop background" 
-            />
-            <div className="movie-detail-container">
-                <div className="movie-img-container">
-                    <div onClick={() => 
-                        isFavourite ? removeFavouriteMovie(movie) : addFavouriteMovie(movie)} className="favourite-button">
-                        {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" /> }
-                    </div>
-                    <img 
-                        className="movie"
-                        src={`${IMAGE_BASE_URL}${movie?.poster_path}`}
-                        alt={movie?.title} 
+            {movie && (
+                <>
+                    <img
+                        className='backdrop'    
+                        src={`${IMAGE_BASE_URL}${movie.backdrop_path}`}
+                        alt="backdrop background" 
                     />
-                </div>
-                <div className="movie-details">
-                    <div className="title-ratings">
-                    <h1>{movie?.title}</h1>
-                    <p className="movie-average">{Math.round((movie?.vote_average || 0) * 10)}%</p>
-                    </div>
-                    <p>{movie?.release_date}</p>
-                    <div className="genres">
-                        {movie?.genres && movie.genres.length > 0 ? (
-                            movie.genres.map((genre) => (
-                                <p key={genre.id}>{genre.name}</p>
-                            ))
-                        ) : (
-                            <p>No genres available</p>
-                        )}
-                    </div>
-                    <h2>Overview</h2>
-                    <p>{movie?.overview}</p>
-                    {trailerKey && (
-                        <div className="trailer">
-                            <h2>Trailer:</h2>
-                            <iframe
-                                width="100%"
-                                height="300"
-                                src={`https://www.youtube.com/embed/${trailerKey}`}
-                                title="Trailer"
-                                frameBorder="0"
-                                allowFullScreen
-                            ></iframe>
+                    <div className="movie-detail-container">
+                        <div className="movie-img-container">
+                            <div onClick={() => 
+                                isFavourite ? removeFavouriteMovie(movie) : addFavouriteMovie(movie)} className="favourite-button">
+                                {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" />}
+                            </div>
+                            <img 
+                                className="movie"
+                                src={`${IMAGE_BASE_URL}${movie.poster_path}`}
+                                alt={movie.title} 
+                            />
                         </div>
-                    )}
-                </div>
-            </div>
+                        <div className="movie-details">
+                            <div className="title-ratings">
+                                <h1>{movie.title}</h1>
+                                <p className="movie-average">{Math.round((movie.vote_average || 0) * 10)}%</p>
+                            </div>
+                            <p>{movie.release_date}</p>
+                            <div className="genres">
+                                {movie.genres && movie.genres.length > 0 ? (
+                                    movie.genres.map((genre) => (
+                                        <p key={genre.id}>{genre.name}</p>
+                                    ))
+                                ) : (
+                                    <p>No genres available</p>
+                                )}
+                            </div>
+                            <h2>Overview</h2>
+                            <p>{movie.overview}</p>
+                            {trailerKey && (
+                                <div className="trailer">
+                                    <h2>Trailer:</h2>
+                                    <iframe
+                                        width="100%"
+                                        height="300"
+                                        src={`https://www.youtube.com/embed/${trailerKey}`}
+                                        title="Trailer"
+                                        frameBorder="0"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </>
+            )}
             <Footer />
         </>
     );

@@ -15,7 +15,7 @@ function PageHome() {
     useEffect(() => {
         const movieFavourites = JSON.parse(localStorage.getItem('react-movie-app-favourites'));
 
-        setFavourites(movieFavourites);
+        setFavourites(Array.isArray(movieFavourites) ? movieFavourites : []);
     }, []);
 
     function saveToLocalStorage (items) {

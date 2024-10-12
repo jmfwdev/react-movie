@@ -6,7 +6,7 @@ import NotFavouriteIcon from '../assets/notFavourite.svg';
 
 function List (
     {
-        favourites,
+        favourites = [],
         handleFavouritesClick,
         handleRemoveFavouritesClick,
     }
@@ -67,8 +67,8 @@ function List (
                     <div className="slider-wrapper">
                         <button className="arrow left" onClick={scrollLeft}>&lt;</button>
                         <div className="movie-slider" ref={sliderRef}>
-                        {categoryMovies.movies.map(movie => {
-                                const isFavourite = favourites.some(fav => fav.id === movie.id);
+                            {Array.isArray(categoryMovies.movies) && categoryMovies.movies.map(movie => {
+                                const isFavourite = Array.isArray(favourites) && favourites.some(fav => fav.id === movie.id);
                                 return (
                                     <div key={movie.id} className="movie">
                                         <Link to={`/detail/${movie.id}`}>
@@ -84,7 +84,7 @@ function List (
                                             </div>
                                         </Link>
                                         <div onClick={() => isFavourite ? handleRemoveFavouritesClick(movie) : handleFavouritesClick(movie)} className="favourite-button">
-                                            {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" /> }
+                                            {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" />}
                                         </div>
                                     </div>
                                 );

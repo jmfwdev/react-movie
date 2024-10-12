@@ -7,8 +7,8 @@ import NotFavouriteIcon from '../assets/notFavourite.svg';
 function MovieList({
     handleFavouritesClick,
     handleRemoveFavouritesClick,
-    favourites,
-    movies,
+    favourites = [],
+    movies = [],
 }) {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
@@ -25,7 +25,7 @@ function MovieList({
         <div>
             <div className='movie-list-container'>
                 {currentMovies.map(movie => {
-                    const isFavourite = favourites.some(fav => fav.id === movie.id);
+                    const isFavourite = Array.isArray(favourites) && favourites.some(fav => fav.id === movie.id);
                     return (
                         <div key={movie.id} className="movie">
                             <Link to={`/detail/${movie.id}`}>
@@ -41,7 +41,7 @@ function MovieList({
                                 </div>
                             </Link>
                             <div onClick={() => isFavourite ? handleRemoveFavouritesClick(movie) : handleFavouritesClick(movie)} className="favourite-button">
-                                {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" /> }
+                                {isFavourite ? <img src={IsFavouriteIcon} alt="favourited" /> : <img src={NotFavouriteIcon} alt="not-favourited" />}
                             </div>
                         </div>
                     );
