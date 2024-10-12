@@ -1,6 +1,4 @@
 .hero-slider {
-
-    display: flex;
     overflow: scroll;
     position: relative;
 
@@ -13,7 +11,7 @@
     .caption {
         position: absolute;
         z-index: 3;
-        bottom: 0.5rem;
+        bottom: 1.5rem;
         width: 50%;
         color: white;
         margin-left: 3rem;
@@ -39,5 +37,57 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
+    }
+
+    .slides {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    .carousel-dots {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: lightgray;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: gray;
+    }
+
+    button.prev,
+    button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 3;
+    }
+
+    button.prev {
+        left: 10px;
+    }
+
+    button.next {
+        right: 10px;
     }
 }
