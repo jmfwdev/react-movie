@@ -91,3 +91,13 @@
         right: 10px;
     }
 }
+
+@media (min-width: 43.75em) {
+    .hero-slider {
+
+        .caption {
+            bottom: 6rem;
+        }
+    
+    }
+}
