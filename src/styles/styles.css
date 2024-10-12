@@ -590,7 +590,6 @@ footer {
   }
   .movie-slider-container .movie:hover .favourite-button {
     display: block;
-    fill: #f00;
   }
 }
 .search-movie-container {
