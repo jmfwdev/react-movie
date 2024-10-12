@@ -1,10 +1,19 @@
-.container-about {
+.about {
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 90vh;
-    justify-content: center;
-    margin-bottom: 15rem;
+    margin: 1rem;
+
+
+    .container-about {
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 62.5rem;
+        height: 90vh;
+        margin-bottom: 15rem;
+        text-align: center;
+        margin: 1rem auto;
+    }
 }

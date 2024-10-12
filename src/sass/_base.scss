@@ -18,3 +18,42 @@ li {
 .fav-spade {
     transform: rotate(90deg);
 }
+
+.mobile-logo {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    height: 2rem;
+    padding: 1rem 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8029805672268908) 50%, rgba(0,0,0,0) 100%);
+    
+    .logo {
+        width: 30px;
+        height: auto;
+        transform: rotate(90deg);
+    }
+}
+
+@media (min-width: 25em) {
+    .mobile-logo {
+        font-size: 40px;
+        
+        .logo {
+            width: 40px;
+        }
+    }
+
+}
+
+@media (min-width: 43.75em) {
+    .mobile-logo {
+        display: none;
+    }
+}

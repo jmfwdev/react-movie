@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import List from '../components/List';
 import IsFavourite from '../components/IsFavourite';
 import NotFavourite from '../components/NotFavourite';
+import Logo from '../components/Logo';
 
 
 function PageHome() {
@@ -40,10 +41,13 @@ function PageHome() {
         saveToLocalStorage(newFavouriteList);
     };
 
+    
+
     return (
         <>
         
         < Header />
+        < Logo />
         < Frontpage />
 
         < List 
