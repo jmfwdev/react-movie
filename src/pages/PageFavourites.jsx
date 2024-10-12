@@ -5,42 +5,40 @@ import Header from '../components/Header';
 import RemoveFavourites from '../components/RemoveFavourites';
 
 function PageFavourites() {
-
     const [favourites, setFavourites] = useState([]);
 
-
-    function removeFavouriteMovie (movie) {
-        const newFavouriteList = favourites.filter((favourite)=> favourite.id !== movie.id);
-
+    const removeFavouriteMovie = (movie) => {
+        const newFavouriteList = favourites.filter((favourite) => favourite.id !== movie.id);
         setFavourites(newFavouriteList);
         saveToLocalStorage(newFavouriteList);
     };
 
-    function saveToLocalStorage (items) {
-        localStorage.setItem('react-movie-app-favourites', JSON.stringify(items))
+    const saveToLocalStorage = (items) => {
+        localStorage.setItem('react-movie-app-favourites', JSON.stringify(items));
     };
 
     useEffect(() => {
-        const movieFavourites = JSON.parse(localStorage.getItem('react-movie-app-favourites'));
-
+        const movieFavourites = JSON.parse(localStorage.getItem('react-movie-app-favourites')) || [];
         setFavourites(movieFavourites);
     }, []);
 
+    console.log(favourites.length);
+
     return (
         <>
-        
-        < Header />
-
-        < FavouriteList 
-            movies={favourites}
-            favouriteComponent={RemoveFavourites} 
-            handleFavouritesClick = {removeFavouriteMovie}
-        />
-
-        < Footer />
-
+            <Header />
+            {favourites.length > 0 ? (
+                <FavouriteList 
+                    movies={favourites}
+                    favouriteComponent={RemoveFavourites} 
+                    handleFavouritesClick={removeFavouriteMovie}
+                />
+            ) : (
+                <h1 className='favourites-noFav-title'>No favorite movies added yet!</h1>
+            )}
+            <Footer />
         </>
-    )
+    );
 }
 
 export default PageFavourites;

@@ -5,25 +5,25 @@ function FavouriteList (props) {
 
     const FavouriteComponent = props.favouriteComponent;
 
+    console.log(props.length);
     return (
         <>
-
-        {props.length > 0 ? (
-           props.movies.map((movie, index) => (
-            <div key={movie.id}>
-                <img    src={`${IMAGE_BASE_URL}${movie.poster_path}`} 
-                        alt="movie"
-                        style={{ width: '200px' }}
-                />
-                <div onClick={() => props.handleFavouritesClick(movie)}>
-                    < FavouriteComponent />
+            <h1 className="favourites-title">Favourites</h1>
+            <div className="favourites-container">
+           {props.movies.map((movie, index) => (
+                <div key={movie.id} className="movie">
+                    <img    src={`${IMAGE_BASE_URL}${movie.poster_path}`} 
+                            alt="movie"
+                            style={{ width: '200px' }}
+                    />
+                    <div onClick={() => props.handleFavouritesClick(movie)}>
+                        < FavouriteComponent />
+                    </div>
                 </div>
+                ))
+            }
+
             </div>
-            ))
-        ) : (
-            <h1>No favourite movies added yet</h1>
-        )
-    }
         </>
     )
 }
