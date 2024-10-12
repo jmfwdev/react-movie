@@ -53,8 +53,7 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
                     </div>
                       <div className="caption">
                         <h2>{movie.title}</h2>
-                        <p>{movie.release_date}</p>
-                        <p>{Math.round(movie.vote_average * 10)}%</p>
+                        <p className='release-date'>{movie.release_date}</p>
                       </div>
                   </div>
                 ))}

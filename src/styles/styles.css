@@ -384,10 +384,17 @@ footer {
 .hero-slider .caption {
   position: absolute;
   z-index: 3;
-  bottom: 6rem;
+  bottom: 0.5rem;
   width: 50%;
   color: white;
   margin-left: 3rem;
+}
+.hero-slider .caption h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.hero-slider .caption .release-date {
+  margin: 0;
 }
 .hero-slider .image-container {
   position: relative;

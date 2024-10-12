@@ -13,10 +13,20 @@
     .caption {
         position: absolute;
         z-index: 3;
-        bottom: 6rem;
+        bottom: 0.5rem;
         width: 50%;
         color: white;
         margin-left: 3rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+        .release-date {
+            margin: 0;
+        }
+
     }
 
     .image-container {
