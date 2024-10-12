@@ -25,6 +25,21 @@
             margin: 0;
         }
 
+        .read-more {
+
+            a {
+                text-decoration: none;
+                width: 6rem;
+                display: block;
+            }
+            p {
+                padding: 1rem;
+                background-color: red;
+                width: 6rem;
+                border-radius: 1rem;
+            }
+        }
+
     }
 
     .image-container {

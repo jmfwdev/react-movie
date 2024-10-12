@@ -501,6 +501,17 @@ footer {
 .hero-slider .caption .release-date {
   margin: 0;
 }
+.hero-slider .caption .read-more a {
+  text-decoration: none;
+  width: 6rem;
+  display: block;
+}
+.hero-slider .caption .read-more p {
+  padding: 1rem;
+  background-color: red;
+  width: 6rem;
+  border-radius: 1rem;
+}
 .hero-slider .image-container {
   position: relative;
 }

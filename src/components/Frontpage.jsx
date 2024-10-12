@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
+import { Link } from 'react-router-dom';
 
 const Frontpage = () => {
     const [movies, setMovies] = useState([]);
@@ -75,6 +76,13 @@ const Frontpage = () => {
                                 <div className="caption">
                                     <h2>{movie.title}</h2>
                                     <p className='release-date'>{movie.release_date}</p>
+
+                                    <div className='read-more'>
+                                        <Link to={`/detail/${movie.id}`}>
+                                        <p>Read More</p>
+                                        </Link>
+                                    </div>
+
                                 </div>
                             </div>
                         ))}
