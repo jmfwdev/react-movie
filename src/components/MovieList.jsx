@@ -5,7 +5,6 @@ import { apiKey, BASE_URL, IMAGE_BASE_URL } from "../globals/globalVariables";
 
 function MovieList (props) {
 
-    const FavouriteComponent = props.favouriteComponent;
 
     return (
         <div className='movie-list-container'>
@@ -16,7 +15,6 @@ function MovieList (props) {
                         style={{ width: '200px' }}
                 />
                 <div onClick={() => props.handleFavouritesClick(movie)}>
-                    < FavouriteComponent />
                 </div>
             </div>
             ))}

@@ -31,8 +31,8 @@
     
         .favourite-button {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 1rem;
+            right: 0.5rem;
             padding: 1rem;
             cursor: pointer;
             background-color: rgba(0, 0, 0, 0.8);
@@ -40,6 +40,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            img {
+                width: 30px;
+                height: auto;
+                border-radius: 0;
+            }
         }
     }
     
@@ -130,11 +136,15 @@
                 z-index: 10;
                 background: rgb(0,0,0);
                 background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8029805672268908) 80%, rgba(0,0,0,0) 100%);
-                border-radius: 0 0 0 1rem;
+                border-radius: 0 0 1rem 1rem;
             }
 
             .favourite-button {
                 display: block;
+            }
+
+            .movie-poster {
+                transform: translateY(-20px);
             }
         }
     }
