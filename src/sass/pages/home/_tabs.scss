@@ -1,5 +1,8 @@
 .movie-slider {
 
+    a {
+        text-decoration: none;
+    }
     display: flex;
     overflow: scroll;
 
@@ -10,5 +13,23 @@
 
     .movie {
         margin: 10px;
+        position: relative;
     }
+
+    .favourite-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.movie-slider-category-heading {
+    text-align: center;
 }

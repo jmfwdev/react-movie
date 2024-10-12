@@ -456,12 +456,32 @@ footer {
   display: flex;
   overflow: scroll;
 }
+.movie-slider a {
+  text-decoration: none;
+}
 .movie-slider img {
   width: 300px;
   height: auto;
 }
 .movie-slider .movie {
   margin: 10px;
+  position: relative;
+}
+.movie-slider .favourite-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-slider-category-heading {
+  text-align: center;
 }
 
 .search-movie-container {
