@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MovieList from '../components/MovieList';
 import SearchBox from '../components/SearchBox';
-import AddFavourites from '../components/AddFavourites';
 
 
 function PageSearch () {
@@ -63,8 +62,8 @@ function PageSearch () {
         {movies.length > 0 ? (
             <MovieList
             movies={movies}
-            favouriteComponent={AddFavourites}
             handleFavouritesClick={addFavouriteMovie}
+            handleRemoveFavouriteClick={removeFavouriteMovie}
             />
         ) : (
             <h1>Input any name, actor, etc. on the search bar.</h1>

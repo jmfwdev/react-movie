@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Frontpage from '../components/Frontpage';
 import Footer from '../components/Footer';
 import List from '../components/List';
-import AddFavourites from '../components/AddFavourites';
+import IsFavourite from '../components/IsFavourite';
+import NotFavourite from '../components/NotFavourite';
 
 
 function PageHome() {
@@ -46,8 +47,11 @@ function PageHome() {
         < Frontpage />
 
         < List 
-            favouriteComponent={AddFavourites} 
+            isFavouriteComponent={IsFavourite}
+            notFavouriteComponent = {NotFavourite}
+            handleRemoveFavouritesClick = {removeFavouriteMovie}
             handleFavouritesClick = {addFavouriteMovie}
+            favourites={favourites}
         />
 
         < Footer />

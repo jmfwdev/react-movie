@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import FavouriteList from '../components/FavouriteList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import RemoveFavourites from '../components/RemoveFavourites';
 
 function PageFavourites() {
     const [favourites, setFavourites] = useState([]);
@@ -22,15 +21,12 @@ function PageFavourites() {
         setFavourites(movieFavourites);
     }, []);
 
-    console.log(favourites.length);
-
     return (
         <>
             <Header />
             {favourites.length > 0 ? (
                 <FavouriteList 
                     movies={favourites}
-                    favouriteComponent={RemoveFavourites} 
                     handleFavouritesClick={removeFavouriteMovie}
                 />
             ) : (

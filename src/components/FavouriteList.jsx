@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { IMAGE_BASE_URL } from "../globals/globalVariables";
+import IsFavouriteIcon from '../assets/isFavourite.svg';
 
 function FavouriteList (props) {
-
-    const FavouriteComponent = props.favouriteComponent;
 
     function excerpt (text, maxLength) {
         return text.length <= maxLength ? text : text.slice(0, maxLength) + "...";
@@ -30,7 +29,7 @@ function FavouriteList (props) {
                     <div    onClick={() => props.handleFavouritesClick(movie)}
                             className="favourite-button"
                     >
-                        < FavouriteComponent />
+                        <img src={IsFavouriteIcon} alt="" />
                     </div>
                 </div>
                 ))
