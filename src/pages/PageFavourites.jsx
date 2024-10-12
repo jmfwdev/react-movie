@@ -5,6 +5,8 @@ import Header from '../components/Header';
 
 function PageFavourites() {
     const [favourites, setFavourites] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 6;
 
     const removeFavouriteMovie = (movie) => {
         const newFavouriteList = favourites.filter((favourite) => favourite.id !== movie.id);
@@ -21,14 +23,45 @@ function PageFavourites() {
         setFavourites(movieFavourites);
     }, []);
 
+    useEffect(() => {
+        const totalPages = Math.ceil(favourites.length / itemsPerPage);
+        if (currentPage > totalPages && totalPages > 0) {
+            setCurrentPage(totalPages);
+        } else if (currentPage === 0) {
+            setCurrentPage(1); // Reset to page 1 if current page is zero
+        }
+    }, [favourites, currentPage]);
+
+    const lastIndex = currentPage * itemsPerPage;
+    const firstIndex = lastIndex - itemsPerPage;
+    const currentFavourites = favourites.slice(firstIndex, lastIndex);
+    const totalPages = Math.ceil(favourites.length / itemsPerPage);
+
     return (
         <>
             <Header />
             {favourites.length > 0 ? (
-                <FavouriteList 
-                    movies={favourites}
-                    handleFavouritesClick={removeFavouriteMovie}
-                />
+                <>
+                    <FavouriteList 
+                        movies={currentFavourites}
+                        handleFavouritesClick={removeFavouriteMovie}
+                    />
+                    <div className="pagination">
+                        <button 
+                            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                            disabled={currentPage === 1}
+                        >
+                            Previous
+                        </button>
+                        <span>{currentPage} / {totalPages}</span>
+                        <button 
+                            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                            disabled={currentPage === totalPages}
+                        >
+                            Next
+                        </button>
+                    </div>
+                </>
             ) : (
                 <h1 className='favourites-noFav-title'>No favorite movies added yet!</h1>
             )}
@@ -38,3 +71,5 @@ function PageFavourites() {
 }
 
 export default PageFavourites;
+
+

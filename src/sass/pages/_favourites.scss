@@ -9,6 +9,15 @@
     margin-top: 5rem;
 }
 
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin: 1rem;
+}
+
 
 .favourites-container {
     display: flex;
