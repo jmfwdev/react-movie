@@ -26,6 +26,7 @@ function List (props) {
                 const url = `${BASE_URL}/movie/${category.value}?api_key=${apiKey}`;
                 const response = await fetch(url);
                 const data = await response.json();
+                console.log(data);
                 allMovies.push({ category: category.label, movies: data.results });
             }
 
@@ -63,7 +64,9 @@ function List (props) {
                         <div className="movie-slider" ref={sliderRef}>
                             {categoryMovies.movies.map(movie => (
                                 <div key={movie.id} className="movie">
-                                    <Link to={`/detail/${movie.id}`}>
+                                    <Link   to={`/detail/${movie.id}`}
+
+                                            >
                                         <img    
                                             loading="lazy"
                                             className="movie-poster" 

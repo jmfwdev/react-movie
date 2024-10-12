@@ -570,6 +570,9 @@ footer {
   .movie-slider-container .movie-slider .favourite-button {
     display: none;
   }
+  .movie-slider-container .movie {
+    background: currentColor;
+  }
   .movie-slider-container .movie .caption {
     display: none;
   }
@@ -583,6 +586,7 @@ footer {
     z-index: 10;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.8029805672) 80%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 0 0 0 1rem;
   }
   .movie-slider-container .movie:hover .favourite-button {
     display: block;
