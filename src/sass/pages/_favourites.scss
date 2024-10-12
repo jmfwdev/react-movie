@@ -1,7 +1,7 @@
 .favourites-noFav-title {
     text-align: center;
     height: 50vh;
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .favourites-title {
@@ -16,6 +16,22 @@
     gap: 20px;
     color: white;
     margin: 1rem;
+}
+
+.favourites {
+    position: relative;
+
+    .background-favourites {
+        margin-top: 5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: blur(.2rem) brightness(0.3);
+    }
 }
 
 

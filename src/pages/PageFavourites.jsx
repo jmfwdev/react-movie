@@ -43,31 +43,42 @@ function PageFavourites() {
             <Header />
 
             < Logo />
-            {favourites.length > 0 ? (
-                <>
-                    <FavouriteList 
-                        movies={currentFavourites}
-                        handleFavouritesClick={removeFavouriteMovie}
-                    />
-                    <div className="pagination">
-                        <button 
-                            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                            disabled={currentPage === 1}
-                        >
-                            Previous
-                        </button>
-                        <span>{currentPage} / {totalPages}</span>
-                        <button 
-                            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                            disabled={currentPage === totalPages}
-                        >
-                            Next
-                        </button>
-                    </div>
-                </>
-            ) : (
-                <h1 className='favourites-noFav-title'>No favorite movies added yet!</h1>
-            )}
+                <div className='favourites'>
+                <svg    xmlns="http://www.w3.org/2000/svg" 
+                        width="25" 
+                        height="25" 
+                        fill="white" 
+                        className="bi bi-heart-fill background-favourites" 
+                        viewBox="0 0 16 16">
+                    <path   fillRule="evenodd" 
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+                {favourites.length > 0 ? (
+                    <>
+                        <FavouriteList 
+                            movies={currentFavourites}
+                            handleFavouritesClick={removeFavouriteMovie}
+                        />
+                        <div className="pagination">
+                            <button 
+                                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                                disabled={currentPage === 1}
+                            >
+                                Previous
+                            </button>
+                            <span>{currentPage} / {totalPages}</span>
+                            <button 
+                                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                                disabled={currentPage === totalPages}
+                            >
+                                Next
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <h1 className='favourites-noFav-title'>No favorite movies added yet!</h1>
+                )}
+                </div>
             <Footer />
         </>
     );
