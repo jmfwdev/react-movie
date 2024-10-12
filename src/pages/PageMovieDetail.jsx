@@ -84,10 +84,12 @@ function PageMovieDetail() {
                         src={`${IMAGE_BASE_URL}${movie?.poster_path}`}
                         alt={movie?.title} 
                     />
-                    <p className="movie-average">{movie?.vote_average}</p>
                 </div>
                 <div className="movie-details">
+                    <div className="title-ratings">
                     <h1>{movie?.title}</h1>
+                    <p className="movie-average">{Math.round((movie?.vote_average || 0) * 10)}%</p>
+                    </div>
                     <p>{movie?.release_date}</p>
                     <div className="genres">
                         {movie?.genres && movie.genres.length > 0 ? (

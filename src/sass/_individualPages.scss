@@ -33,10 +33,14 @@
     }
 
     .movie-average {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .title-ratings {
+        display: flex;
+        align-items: center;
     }
 
 
