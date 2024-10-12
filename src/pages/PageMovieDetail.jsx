@@ -106,8 +106,8 @@ function PageMovieDetail() {
                         <div className="trailer">
                             <h2>Trailer:</h2>
                             <iframe
-                                width="800"
-                                height="400"
+                                width="100%"
+                                height="300"
                                 src={`https://www.youtube.com/embed/${trailerKey}`}
                                 title="Trailer"
                                 frameBorder="0"

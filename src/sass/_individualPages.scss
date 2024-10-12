@@ -1,10 +1,10 @@
 .movie-detail-container {
     margin-top: 4rem;
-    display: flex;
+    // display: flex;
 
     .movie-img-container {
         height: auto;
-        width: 40%;
+        // width: 40%;
         margin: 1rem;
         position: relative;
 
@@ -45,7 +45,7 @@
 
 
     .movie-details {
-        width: 60%;
+        // width: 60%;
         margin: 1rem;
 
         .trailer {
@@ -70,4 +70,18 @@
     object-fit: cover;
     z-index: -1;
     filter: blur(.2rem) brightness(0.3);
+}
+
+@media (min-width: 43.75rem) {
+    .movie-detail-container {
+        display: flex;
+    }
+
+    .movie-img-container {
+        width: 40%;
+    }
+
+    .movie-details {
+        width: 60%;
+    }
 }

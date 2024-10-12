@@ -430,11 +430,9 @@ header ul {
 }
 .movie-detail-container {
   margin-top: 4rem;
-  display: flex;
 }
 .movie-detail-container .movie-img-container {
   height: auto;
-  width: 40%;
   margin: 1rem;
   position: relative;
 }
@@ -469,7 +467,6 @@ header ul {
   align-items: center;
 }
 .movie-detail-container .movie-details {
-  width: 60%;
   margin: 1rem;
 }
 .movie-detail-container .movie-details .trailer {
@@ -492,6 +489,17 @@ header ul {
   filter: blur(0.2rem) brightness(0.3);
 }
 
+@media (min-width: 43.75rem) {
+  .movie-detail-container {
+    display: flex;
+  }
+  .movie-img-container {
+    width: 40%;
+  }
+  .movie-details {
+    width: 60%;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
