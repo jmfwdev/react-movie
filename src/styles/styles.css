@@ -590,6 +590,7 @@ footer {
   }
   .movie-slider-container .movie:hover .favourite-button {
     display: block;
+    fill: #f00;
   }
 }
 .search-movie-container {
@@ -626,12 +627,39 @@ footer {
 .favourites-container {
   display: flex;
   flex-wrap: wrap;
-  width: 1000px;
+  max-width: 62.5rem;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-evenly;
 }
 .favourites-container .movie {
-  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px #000;
+  margin: 10px;
+  position: relative;
+  transition: transform 0.2s;
+  cursor: pointer;
+  width: 300px;
+}
+.favourites-container .movie .caption {
+  padding: 1rem;
+}
+.favourites-container .movie img {
+  width: 300px;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
+}
+.favourites-container .movie .favourite-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

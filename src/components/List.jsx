@@ -53,7 +53,6 @@ function List (props) {
     };
 
 
-
     return (
         <div className="movie-slider-container">
             {movies.map((categoryMovies) => (
