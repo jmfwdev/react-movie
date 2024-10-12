@@ -1,12 +1,25 @@
 .search-movie-container {
-    width: 100vw;
-    height: 100vh;
-
-    margin-top: 5rem;
+    width: 100%;
+    max-width: 62.5rem;
+    height: auto;
+    margin: 7rem auto;
 
     .movie-list-container {
         display: flex;
         flex-wrap: wrap;
     }
 
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+
+        input {
+            padding: 1rem;
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
 }

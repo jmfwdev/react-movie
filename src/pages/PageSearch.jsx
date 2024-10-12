@@ -62,14 +62,14 @@ function PageSearch () {
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 
         {movies.length > 0 ? (
-            <MovieList
-            movies={movies}
-            handleFavouritesClick={addFavouriteMovie}
-            handleRemoveFavouriteClick={removeFavouriteMovie}
-            favourites={favourites}
+            <MovieList 
+            handleFavouritesClick={addFavouriteMovie} 
+            handleRemoveFavouritesClick={removeFavouriteMovie} 
+            favourites={favourites} 
+            movies={movies} 
             />
         ) : (
-            <h1>Input any name, actor, etc. on the search bar.</h1>
+            <h2>Input any movie on the search bar.</h2>
         )
     }
         </div>

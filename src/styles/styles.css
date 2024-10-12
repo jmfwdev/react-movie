@@ -636,13 +636,25 @@ footer {
   }
 }
 .search-movie-container {
-  width: 100vw;
-  height: 100vh;
-  margin-top: 5rem;
+  width: 100%;
+  max-width: 62.5rem;
+  height: auto;
+  margin: 7rem auto;
 }
 .search-movie-container .movie-list-container {
   display: flex;
   flex-wrap: wrap;
+}
+.search-movie-container .search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.search-movie-container .search-bar input {
+  padding: 1rem;
+}
+.search-movie-container h2 {
+  text-align: center;
 }
 
 .about {
