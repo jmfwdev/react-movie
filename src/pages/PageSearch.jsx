@@ -66,6 +66,7 @@ function PageSearch () {
             movies={movies}
             handleFavouritesClick={addFavouriteMovie}
             handleRemoveFavouriteClick={removeFavouriteMovie}
+            favourites={favourites}
             />
         ) : (
             <h1>Input any name, actor, etc. on the search bar.</h1>
