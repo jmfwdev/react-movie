@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import MovieList from '../components/MovieList';
 import SearchBox from '../components/SearchBox';
+import Logo from '../components/Logo';
 
 
 function PageSearch () {
@@ -56,6 +57,7 @@ function PageSearch () {
         <>
         
         < Header />
+        < Logo />
         <div className='search-movie-container'>
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 

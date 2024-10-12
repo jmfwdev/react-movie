@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Logo from '../components/Logo';
 
 function PageAbout() {
     
@@ -9,6 +10,8 @@ function PageAbout() {
         <main>
         
         < Header />
+        < Logo />
+
       <div className='about'>
         <div className="container-about">
           <h1 className="about-title">Welcome to SPADE</h1>

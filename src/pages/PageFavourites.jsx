@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import FavouriteList from '../components/FavouriteList';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Logo from '../components/Logo';
 
 function PageFavourites() {
     const [favourites, setFavourites] = useState([]);
@@ -40,6 +41,8 @@ function PageFavourites() {
     return (
         <>
             <Header />
+
+            < Logo />
             {favourites.length > 0 ? (
                 <>
                     <FavouriteList 
