@@ -28,6 +28,10 @@
         cursor: pointer;
         width: 300px;
 
+        a {
+            text-decoration: none;
+        }
+
         .caption {
             padding: 1rem;
         }
@@ -54,6 +58,46 @@
                 width: 30px;
                 height: auto;
                 border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 43.75em) {
+    .favourites-container {
+
+        .movie {
+            background: currentColor;
+            .caption {
+                display: none;
+            }
+
+            img {
+                border-radius: 1rem
+            }
+
+            .favourite-button {
+                display: none;
+            }
+        }
+
+        .movie:hover {
+            .caption {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                z-index: 10;
+                background: rgb(0,0,0);
+                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8029805672268908) 80%, rgba(0,0,0,0) 100%);
+                border-radius: 0 0 1rem 1rem;
+            }
+
+            .favourite-button {
+                display: flex;
+            }
+
+            .movie-poster {
+                transform: translateY(-20px);
             }
         }
     }
