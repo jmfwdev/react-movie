@@ -21,20 +21,18 @@ header {
     }
 
     span {
-        display: none;
         color: white;
         font-size: 2.5rem;
     }
 
     .logo {
-        display: none;
         width: 35px;
         height: auto;
         transform: rotate(90deg);
     }
 
     .main-logo {
-        display: flex;
+        display: none;
     }
 
     ul {
@@ -44,4 +42,35 @@ header {
         justify-content: space-evenly;
         width: 100vw;
     }
+}
+
+@media (min-width: 43.75em) {
+    header {
+        top: 0;
+        height: 4rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .main-logo {
+            display: flex;
+            margin: 0.5rem 3rem;
+            align-items: center;
+        }
+
+        nav {
+            margin: 0.5rem;
+            width: 20rem;
+            display: flex;
+            justify-content: flex-end;
+            a {
+                padding: 1rem;
+            }
+        }
+
+
+    }
+
+
 }
