@@ -1,7 +1,7 @@
 
 header {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.500);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
     bottom: 0;
     width: 100vw;
@@ -11,10 +11,13 @@ header {
     a {
         color: white;
         text-decoration: none;
-        padding: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        li {
+            font-size: 10px;
+        }
     }
 
     span {
